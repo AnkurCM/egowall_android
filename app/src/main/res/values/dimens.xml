@@ -4,4 +4,10 @@
     <dimen name="size_30">30dp</dimen>
     <dimen name="size_90">90dp</dimen>
     <dimen name="size_100">100dp</dimen>
+    <dimen name="size_180">180dp</dimen>
+    <dimen name="size_300">300dp</dimen>
+    <dimen name="size_500">500dp</dimen>
+    <dimen name="font_36">36sp</dimen>
+    <dimen name="size_14">14dp</dimen>
+    <dimen name="font_26">26sp</dimen>
 </resources>

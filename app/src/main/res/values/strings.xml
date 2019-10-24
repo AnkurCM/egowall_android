@@ -1,6 +1,26 @@
 <resources>
     <string name="app_name">EgoWall_Android</string>
+    <string name="egowall">Egowall</string>
     <string name="signup">Sign Up</string>
     <string name="next">Next</string>
     <string name="egowall_image_is_not_found">EgoWall image is not found</string>
+    <string name="be_the_real_you">Be the real you</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_back">WELCOME BACK</string>
+    <string name="email">Email</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="password">Password</string>
+    <string name="invalid_password">Invalid Password</string>
+    <string name="login">Login</string>
+    <string name="by_signing_in_you_agree_to_our_terms_conditions">
+        <![CDATA[By Signing In, you agree to our terms & conditions]]></string>
+    <string name="is_logged_in">is_logged_in</string>
+    <string name="open_login">open_login</string>
+
+    <string name="permission_title">Need Permission</string>
+    <string name="grant">Grant</string>
+    <string name="cancel">Cancel</string>
+    <string name="permission_logic_camera">The app needs permission to access the camera in order to take a picture
+    </string>
 </resources>
