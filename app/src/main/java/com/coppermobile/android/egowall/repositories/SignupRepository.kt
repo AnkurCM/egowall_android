@@ -1,6 +1,9 @@
 package com.coppermobile.android.egowall.repositories
 
 import androidx.lifecycle.LiveData
+import com.coppermobile.android.egowall.data.datasources.SignupDataSource
+import com.coppermobile.android.egowall.data.requests.SignupRequest
+import com.coppermobile.android.egowall.data.responses.SignupResponse
 
 class SignupRepository private constructor(private val signupDataSource: SignupDataSource) {
 
@@ -12,14 +15,14 @@ class SignupRepository private constructor(private val signupDataSource: SignupD
             if (INSTANCE == null) {
                 synchronized(SignupRepository::class.java) {
                     INSTANCE =
-                        SignupRepository(registerDataSource)
+                        SignupRepository(signupDataSource)
                 }
             }
             return INSTANCE!!
         }
     }
 
-    fun getRegisterResponse(signupRequest: RegistrationRequest): LiveData<RegistrationResponse> {
-        return signupDataSource.getRegisterResponse(signupRequest)
+    fun getRegisterResponse(signupRequest: SignupRequest): LiveData<SignupResponse> {
+        return signupDataSource.getSignupResponse(signupRequest)
     }
 }

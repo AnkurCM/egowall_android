@@ -18,9 +18,18 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        debug {
+            buildConfigField "String", "BASE_URL", "\"http://34.238.250.220/dev/\""
+            buildConfigField "String", "IMAGE_BASE_URL", "\"http://34.238.250.220/dev/public\""
+            buildConfigField "long", "TIMEOUT_IN_MIN", "3L"
+        }
         release {
+            buildConfigField "String", "BASE_URL", "\"http://34.238.250.220/dev/\""
+            buildConfigField "String", "IMAGE_BASE_URL", "\"http://34.238.250.220/dev/public\""
+            buildConfigField "long", "TIMEOUT_IN_MIN", "3L"
+
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
