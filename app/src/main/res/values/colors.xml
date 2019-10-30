@@ -3,4 +3,22 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red_color">#C4302B</color>
+    <color name="red_color_90">#B3C4302B</color>
+    <color name="onboarding_text_color">#333333</color>
+    <color name="blackE0E0E0">#E0E0E0</color>
+    <color name="black828282">#828282</color>
+    <color name="green6FCF97">#6FCF97</color>
+    <color name="view_background">#4D000000</color>
+    <color name="toggle_green">#4CD964</color>
+    <color name="login_hint_color">#828282</color>
+    <color name="blackC7C7CC">#C7C7CC</color>
+    <color name="gray_7C7C7C">#7C7C7C</color>
+    <color name="gray_F2F2F2">#F2F2F2</color>
+    <color name="blue_shadow">#332F80ED</color>
+    <color name="blue_shadow_transparent">#1A2F80ED</color>
+    <color name="subscription_card_shadow">#33000000</color>
 </resources>

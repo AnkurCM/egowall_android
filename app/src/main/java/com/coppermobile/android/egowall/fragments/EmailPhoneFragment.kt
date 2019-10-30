@@ -4,19 +4,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProviders
 import com.coppermobile.android.egowall.R
-import com.coppermobile.android.egowall.factories.ViewModelFactory
 import com.coppermobile.android.egowall.utils.Helpers
 import com.coppermobile.android.egowall.utils.SharedPreferencesHelper
 import com.coppermobile.android.egowall.viewmodels.SignupViewModel
-import kotlinx.android.synthetic.main.fragment_sign_up.*
+import kotlinx.android.synthetic.main.fragment_email_phone.*
+
 
 class EmailPhoneFragment : BaseFragment() {
     var sharedPreferencesHelper: SharedPreferencesHelper? = null
     var signupViewModel: SignupViewModel? = null
+    var signupFragment: SignupFragment? = null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_sign_up, container, false)
+        return inflater.inflate(R.layout.fragment_email_phone, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -24,26 +24,28 @@ class EmailPhoneFragment : BaseFragment() {
 
         initializeUI()
         sharedPreferencesHelper = SharedPreferencesHelper.getInstance(activity!!)
-        val factory = ViewModelFactory.getInstance()
-        signupViewModel = ViewModelProviders.of(activity!!, factory)[SignupViewModel::class.java]
+//        val factory = ViewModelFactory.getInstance()
+//        signupViewModel = ViewModelProviders.of(activity!!, factory)[SignupViewModel::class.java]
 
 
-        frag_signup_btn_signup.setOnClickListener {
+        frag_email_phone_btn_signup.setOnClickListener {
             Helpers.hideKeyboard(activity!!)
             var valid = verifyEmailOrPhone()
-            if(valid){
+            if (valid) {
                 saveToSP()
-            }else{
+                signupFragment = SignupFragment()
+                switchFragment(signupFragment!!, false, getString(R.string.signup_fragment))
+            } else {
 
             }
         }
     }
 
     private fun saveToSP() {
-
+        sharedPreferencesHelper?.putString(getString(R.string.email), tiet_frag_email_phone.text.toString())
     }
 
-    private fun verifyEmailOrPhone():Boolean {
+    private fun verifyEmailOrPhone(): Boolean {
         return true
     }
 

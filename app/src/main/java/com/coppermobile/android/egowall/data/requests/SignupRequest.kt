@@ -8,9 +8,18 @@ import com.google.gson.annotations.SerializedName
  */
 class SignupRequest {
 
+    @SerializedName("firstName")
+    var firstName: String? = null
+
+    @SerializedName("lastName")
+    var lastName: String? = null
+
+    @SerializedName("userEmail")
+    var userEmail: String? = null
+
     @SerializedName("password")
     var password: String? = null
 
-    @SerializedName("new_password")
-    var newPassword: String? = null
+    @SerializedName("format")
+    var format: String? = null
 }

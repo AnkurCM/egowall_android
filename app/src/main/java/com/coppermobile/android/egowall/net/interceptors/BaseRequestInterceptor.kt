@@ -2,7 +2,9 @@ package com.abcinternational.popdot.net.interceptors
 
 import okhttp3.Interceptor
 import okhttp3.Response
+import okhttp3.logging.HttpLoggingInterceptor
 import java.io.IOException
+
 
 /**
  * Created by Sunita on 07, February, 2019
@@ -13,6 +15,8 @@ class BaseRequestInterceptor : Interceptor {
     @Throws(IOException::class)
     override fun intercept(chain: Interceptor.Chain): Response {
         val original = chain.request()
+        val logging = HttpLoggingInterceptor()
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
         val request = original.newBuilder()
             .addHeader(
                 CONTENT_TYPE,

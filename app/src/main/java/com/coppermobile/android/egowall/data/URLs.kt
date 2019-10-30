@@ -13,7 +13,7 @@ class URLs private constructor() {
         const val BASE_URL = BuildConfig.BASE_URL
         const val IMAGE_BASE_URL = BuildConfig.IMAGE_BASE_URL
 
-        const val REGISTER = "api/user/add"
+        const val REGISTER = "register"
         const val LOGIN = "api/user/login"
         const val ACTIVATION_CODE = "api/user/activate"
         const val RESEND_ACTIVATION_CODE = "api/user/resendotp"

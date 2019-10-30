@@ -8,19 +8,297 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcome_back">WELCOME BACK</string>
-    <string name="email">Email</string>
     <string name="invalid_email">Invalid Email</string>
     <string name="password">Password</string>
     <string name="invalid_password">Invalid Password</string>
-    <string name="login">Login</string>
     <string name="by_signing_in_you_agree_to_our_terms_conditions">
         <![CDATA[By Signing In, you agree to our terms & conditions]]></string>
-    <string name="is_logged_in">is_logged_in</string>
-    <string name="open_login">open_login</string>
+
+    <string name="email_phone_data">Enter Email or Phone</string>
+    <string name="welcome_back_please_login_to_your_account">Welcome back, please login to your account.</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="select_your_preferred_language">Select Your Preferred Language</string>
+    <string name="select_country">Select Country</string>
+    <string name="continue_text">Continue</string>
+    <string name="all_fields_are_mandatory">All fields are mandatory</string>
+    <string name="field_required">Field Required</string>
+    <string name="onboarding_enter_data">Onboarding enter data</string>
+    <string name="please_enter_your_name">Please Enter Your Name</string>
+    <string name="please_select_your_language">Please Select Your Language</string>
+    <string name="mic_testing_for_asr">Mic Testing (for ASR)</string>
+    <string name="please_read_following_sentence">Please Read Following Sentence:</string>
+    <string name="please_retry_following_sentence">Please Retry Following Sentence:</string>
+    <string name="onboarding_enter_data_fragment">Onboarding Enter Data Fragment</string>
+    <string name="user_name">User Name</string>
+    <string name="selected_language">Selected Language</string>
+    <string name="selected_language_sname">Selected Language Short Name</string>
+    <string name="selected_country">Selected Country</string>
+    <string name="hello">Hello</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="not_supported">This Language is not supported</string>
+    <string name="space">\u0020</string>
+    <string name="dot">.</string>
+    <string name="image">image</string>
+    <string name="login_activity">Login Activity</string>
+    <string name="welcome">Welcome</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="i_accept_terms_conditions">I accept terms &amp; conditions and privacy policy.</string>
+    <string name="already_a_member_login">Already A Member? LOGIN</string>
+    <string name="email_required">Valid Email Required</string>
+    <string name="activation_code_required">Please enter valid activation code</string>
+    <string name="password_required">Please set atleast 8 to 15 digit alphanumeric password</string>
+    <string name="password_required_text">(Please set atleast 8 digit alphanumeric password)</string>
+    <string name="login_in">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="not_registerd_yet_signup">Not Registered Yet? SIGN UP</string>
+    <string name="by_loging_in_you_agree_to_our_terms_conditions">
+        <![CDATA[By logging in, you agree to our terms & conditions]]></string>
+    <string name="sign_up">Sign Up</string>
+
+    <string name="read_in_language">Read in language:</string>
+    <string name="features">FEATURES</string>
+    <string name="choose_the_features_you_enjoy">Choose the features you enjoy.</string>
+    <string name="_1_translation_in_your_preferred_language">1. Translation in Your Preferred Language.</string>
+    <string name="see_the_audio_and_text_translation_in_your_preferred_language">See the Audio and Text Translation in
+        Your Preferred Language.
+    </string>
+    <string name="karaoke">2. Karaoke</string>
+    <string name="enjoy_the_music_with_red_highlighted_text">Enjoy the Music with Red Highlighted Text.</string>
+    <string name="popdot_text">Popdot</string>
+    <string name="Popdot">3. Popdot</string>
+    <string name="_3_">3</string>
+    <string name="follow_the_english_lyrics_with_the_red_bouncing_ball">Follow the English Lyrics with the Red Bouncing
+        Ball
+    </string>
+    <string name="time_to_speak">4. Time to Speak</string>
+    <string name="watch_the_video_and_read_the_english_lyrics">Watch the Video and Read the English Lyrics.</string>
+    <string name="practice">5. Practice</string>
+    <string name="practice_the_word_that_you_ve_just_said">Practice the Word that You’ve Just Said.</string>
+    <string name="total_score">6. Total Score</string>
+    <string name="tap_on_the_score_and_see_all_the_words_you_have_repeated">Tap on the Score and See All the Words You
+        Have Repeated.
+    </string>
+    <string name="rank_the_song">7. Rank the Song</string>
+    <string name="the_popularity_of_the_song_is_ranked_in_the_playlist">The Popularity of the Song is Ranked in the
+        Playlist.
+    </string>
+    <string name="_8_">8</string>
+    <string name="enjoy_the_youtube_video">Enjoy the YouTube Video.</string>
+    <string name="start_text">Start</string>
+    <string name="karaoke_checked">karaoke_checked</string>
+    <string name="popdot_checked">popdot_checked</string>
+    <string name="mic_testing_fragment">MicTestingFragment</string>
+    <string name="search">Search</string>
+    <string name="notifications">Notifications</string>
+    <string name="song">Song</string>
+    <string name="my_play_list">My Playlist</string>
+    <string name="history">History</string>
+    <string name="song_name">Love, love me do</string>
+    <string name="singer_name">The Battles</string>
+    <string name="numberOfLike">328</string>
+    <string name="_1">#99</string>
+    <string name="word_count_number">Word Count: 51</string>
+    <string name="length_number">Length: 2:51</string>
+    <string name="word_list">Word List</string>
+    <string name="my_profile">My Profile</string>
+    <string name="be_a_member">Be a Member</string>
+    <string name="faq">FAQ</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="zero">0</string>
+    <string name="log_out">Log Out</string>
+    <string name="total">Total</string>
+    <string name="apply">Apply</string>
+    <string name="filter_songs_by">Filter Songs by</string>
+    <string name="reset">Reset</string>
+    <string name="word_count">Word Count</string>
+    <string name="artist_name">Artist Name</string>
+    <string name="length">Length (seconds)</string>
+    <string name="genre">Genre</string>
+    <string name="keywords">Keywords</string>
+    <string name="FEMALE">FEMALE</string>
+    <string name="TTS_name_request">en-GB-Standard-A</string>
+    <string name="MP3">MP3</string>
+    <string name="language_short_name">Language Short Name</string>
+    <string name="en">en</string>
+    <string name="feature_screen">Feature Screen</string>
+    <string name="mic_testing_screen">Mic Testing Screen</string>
+    <string name="onboarding_frag_screen">Onboarding Fragment Screen</string>
+    <string name="skip_guest_login">skip guest login</string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="done">Done</string>
+    <string name="submit">Submit</string>
+    <string name="enter_activation_code">Enter Activation Code</string>
+    <string name="verification">Verification</string>
+    <string name="please_try_again_later">Please try again later</string>
+    <string name="forgot_password_text">Enter the email address associated with your account, and we\'ll email you a
+        temporary password to reset your password.
+    </string>
+    <string name="send_reset_link">Send Reset Link</string>
+    <string name="enter_temporary_password">Enter Temporary Password</string>
+    <string name="save">save</string>
+    <string name="change_password">Change Password</string>
+    <string name="current_password">Current password</string>
+    <string name="new_password">New password</string>
+    <string name="access_token">accessToken</string>
+    <string name="open_login">Open Login</string>
+    <string name="login_fragment">Login Fragment</string>
+    <string name="signup_fragment">Signup Fragment</string>
+    <string name="is_logged_in">isLoggedIn</string>
+    <string name="English">English</string>
+    <string name="resend_activation_code">Resend Activation Code</string>
+    <string name="email">email</string>
+    <string name="skip">Skip</string>
+    <string name="please_accept_terms_and_conditions">Please accept terms and conditions to continue</string>
+    <string name="audio_permission_message">This app needs to record audio and recognize your speech.</string>
+    <string name="LINEAR16">LINEAR16</string>
+    <string name="encoded_string">encodedString</string>
+    <string name="unable_to_translate">Unable to translate</string>
+    <string name="please_provide_below_information">Please provide below information</string>
+    <string name="we_sent_you_a_code_to_verify_your_email">We sent you a code to verify\nyour email</string>
+    <string name="enter_code">Enter Code\u0020</string>
+    <string name="resend">Resend</string>
+    <string name="zero_time">00:00</string>
+    <string name="i_didnt_receive_a_code">I didn\'t receive a code!</string>
+    <string name="i_love_music">I Love Music!</string>
+    <string name="try_again">Try Again</string>
+    <string name="US">US</string>
+    <string name="speak_text">Speak Text</string>
+    <string name="wrong_input">Oops!</string>
+    <string name="try_again_and_say">Please try again and say -</string>
+    <string name="move_closer_to_mic">Please move closer to mic so we can hear you!</string>
+    <string name="you_are_already_registered_with_us_please_login">You are already registered with us, please login
+    </string>
+    <string name="from_activation">from_activation</string>
+    <string name="activation_fragment">activation_fragment</string>
+    <string name="email_id_not_registered_with_us">Email not registered with us</string>
+    <string name="no_matching_artist">No Matching Artist</string>
+    <string name="no_matching_data">No Matching Data</string>
+    <string name="ok">OK</string>
+    <string name="no_data_found">No Matching Artist</string>
+    <string name="support_speech">Your device doesn\'t support speech input</string>
+    <string name="say_artist_name">Say artist name!</string>
+    <string name="say_something">Say something</string>
+
+    <string name="songs_word_count">Word Count:</string>
+    <string name="song_length">Length:</string>
+    <string name="song_sec">sec</string>
+    <string name="hash">#</string>
+
+    <string name="temporary_password_has_been_sent_on_your_email_address">Temporary password has been sent on your email
+        address
+    </string>
+    <string name="favorite">favorite</string>
+
+    <string name="burst_from_center_instructions">Tap and it will burst</string>
+
+    <string name="error_tap_to_retry">Oops! No Songs Found.</string>
+    <string name="word_list_error_tap_to_retry">Oops! No Words List Found.</string>
+    <string name="list_of_words">LIST OF WORDS</string>
+    <string name="_300_words">300 Words</string>
+    <string name="_15_songs">15 Songs</string>
+    <string name="_2_weeks">2 Weeks</string>
+    <string name="mail_me_my_word_list">Mail Me My Word List</string>
+    <string name="tap_on_the_words_to_listen_and_repeat">Tap on the Words to Listen and Repeat</string>
+    <string name="tap_on_the_words_to_repeat">Tap on the Words to Repeat</string>
+    <string name="repeat_the_words_in_black">Repeat the Words in Black</string>
+    <string name="monday_14_january_2019">Monday, 14 January 2019</string>
+    <string name="song_snippet_frag">SongSnippetFrag</string>
+    <string name="song_play_frag">SongPlayFragment</string>
+    <string name="song_id">song_id</string>
+
+    <string name="lbl_total">Total</string>
+    <string name="tap_on_the_words">Tap on the Words to Listen and Repeat.</string>
+    <string name="repeat_the_words">Repeat the Words in Black.</string>
+    <string name="song_score">Song Score</string>
+    <string name="report">Report</string>
+
+    <string name="word_practice_repeat_word">Repeat the word</string>
+    <string name="subscription_status_text">Subscription Status</string>
+    <string name="setting">Settings</string>
+    <string name="subscription_status">Please subscribe now to
+        access all features and play exciting games. Have fun.
+    </string>
+    <string name="translate_to_preferred_language">Translate to Preferred Language</string>
+    <string name="Popdot_Video_with_Ball">Popdot Video with Ball</string>
+    <string name="Voice_Over_in_English">Voice Over in English</string>
+    <string name="Voice_Over_in_Preferred_Language">Voice Over in Preferred Language</string>
+    <string name="Voice_Gender">Voice Gender</string>
+    <string name="change_preffered_lang">Change Preferred Language</string>
+    <string name="change_loc">Change Location</string>
+    <string name="login">Login</string>
+    <string name="unable_to_get_profile">Unable to Fetch Profile</string>
+    <string name="select_proper_image_type">Please select a JPG, JPEG or PNG file</string>
+    <string name="unable_to_upload_pic">Unable to Upload Profile Pic</string>
+    <string name="unable_to_update_name">Unable to Update Name</string>
+    <string name="translate_preferred_language">translate_preferred_language</string>
+    <string name="popdot_video_with_ball">popdot_video_with_ball</string>
+    <string name="voice_over_in_english">voice_over_in_english</string>
+    <string name="voice_over_preferred_language">voice_over_preferred_language</string>
+    <string name="voice_gender">voice_gender</string>
+    <string name="male_voice">male_voice</string>
+    <string name="female_voice">female_voice</string>
+    <string name="MALE">MALE</string>
+
+    <string name="search_songs">Search Songs</string>
+
+    <string name="user_failed_with_popdot">Sorry ! Looks like you couldn\'t learn any words with us! Would you like to
+        retry?
+    </string>
+    <string name="delete_all">Delete All</string>
+    <string name="number_format_exception">Number format exception - loadFilters()</string>
+    <string name="faqs">FAQs</string>
+    <string name="question">Question?</string>
+    <string name="dummy_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+        been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+        electronic typesetting, remaining essentially unchanged.
+    </string>
+    <string name="firebase_token">firebase_token</string>
+    <string name="subscribe_to_save">Subscribe to Save Score</string>
+    <string name="my_profile_data">my_profile_data</string>
+    <string name="user_image">user_image</string>
+    <string name="words">Words</string>
+    <string name="weeks">Weeks</string>
+    <string name="songs">Songs</string>
+    <string name="no_connection">No Connection!</string>
+    <string name="please_check_your_internet_connection_and_try_again">Please check your internet connection and try
+        again.
+    </string>
+    <string name="no_internet_fragment">No internet fragment</string>
+    <string name="preparing">Preparing!</string>
+    <string name="prepared">We are done!</string>
+    <string name="cancelling">Cancelling</string>
+    <string name="error_tap_to_retry1">Looks like something is not right with us! Please try again!</string>
+    <string name="you_are_playing_very_well_but_did_not_subscribe_yet_you_will_loose_all_the_balls_you_earned_and_songs_in_the_playlist_by_31st_jan_2019">
+        You are playing very well but did not subscribe yet. You will loose all the balls you earned and songs in the
+        playlist by 31st Jan, 2019.
+    </string>
+    <string name="hurry_it_s_pretty_simple_and_cheap">HURRY! It\'s pretty simple and cheap!</string>
+    <string name="cancel">Cancel</string>
 
     <string name="permission_title">Need Permission</string>
     <string name="grant">Grant</string>
-    <string name="cancel">Cancel</string>
+    <string name="permission_logic_audio">The app needs permission to record audio in order to continue</string>
+    <string name="permission_logic_storage">The app needs permission to access the storage in order continue</string>
     <string name="permission_logic_camera">The app needs permission to access the camera in order to take a picture
     </string>
+    <string name="device_id">device_id</string>
+    <string name="user_subscription_object">user_subscription_object</string>
+    <string name="already_subscribed_user_message">Your subscription will expire on 13 May 2019. Subscription Period =
+        30 days from the Date of Purchase - 14 April, 2019
+    </string>
+    <string name="free_trial">free_trial</string>
+    <string name="from_login">from_login</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="guest_login_date">guest_login_date</string>
+    <string name="start_time">start_time</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="privacy_policy_accept"><![CDATA[I accept terms & conditions and privacy policy.]]></string>
+    <string name="complete_sign_up">Complete Sign up</string>
+    <string name="welcome_to_egowall">Welcome To Egowall</string>
+    <string name="enter_email_or_phone_number">Enter Email or Phone Number</string>
 </resources>

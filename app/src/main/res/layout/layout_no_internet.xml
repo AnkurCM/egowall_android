@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+
+    <LinearLayout
+            android:id="@+id/ll_no_internet_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_connection"
+                android:textColor="@color/red_color"
+                android:textSize="@dimen/font_20"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/size_32"/>
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/please_check_your_internet_connection_and_try_again"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_12"
+                android:layout_gravity="center"
+                android:fontFamily="@font/mulibold"
+                android:layout_marginTop="@dimen/size_12"/>
+
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/btn_try_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_no_internet_red"
+            android:text="@string/try_again"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_below="@id/ll_no_internet_container"
+            android:layout_marginTop="@dimen/size_100"
+            android:layout_centerHorizontal="true"
+            android:paddingStart="@dimen/size_26"
+            android:paddingEnd="@dimen/size_26"
+            android:paddingTop="@dimen/size_6"
+            android:paddingBottom="@dimen/size_6"
+            android:textSize="@dimen/font_16"/>
+
+
+</RelativeLayout>
