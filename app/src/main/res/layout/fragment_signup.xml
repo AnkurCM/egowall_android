@@ -72,10 +72,12 @@
             style="@style/LoginTextInputLayoutStyle"
             android:layout_width="match_parent"
             app:errorEnabled="true"
+            app:passwordToggleEnabled="true"
             android:layout_height="wrap_content"
             android:hint="@string/enter_password">
 
         <com.google.android.material.textfield.TextInputEditText
+                android:inputType="textPassword"
                 android:id="@+id/tiet_frag_signup_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>

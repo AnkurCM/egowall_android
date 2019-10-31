@@ -51,5 +51,15 @@
             android:layout_height="wrap_content"
             android:text="@string/next"/>
 
+    <TextView
+            android:id="@+id/tv_frag_email_phone_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/size_34"
+            android:padding="@dimen/size_16"
+            android:text="@string/already_a_member_login"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_14"/>
 
 </LinearLayout>

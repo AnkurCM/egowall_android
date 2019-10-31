@@ -78,13 +78,6 @@ object Helpers {
     }
 
     /**
-     * Method is used to validate email is in right pattern oir not.
-     * */
-    fun isValidEmail(email: String): Boolean {
-        return Patterns.EMAIL_ADDRESS.matcher(email).matches() && VALID_EMAIL_ADDRESS_REGEX.matcher(email).find()
-    }
-
-    /**
      * Method is used to validate email is password is 6 character long or not.
      * */
     fun isValidPassword(password: String): Boolean {
@@ -128,5 +121,21 @@ object Helpers {
 
         val sdf1 = SimpleDateFormat(todateFormat)
         return sdf1.format(parse)
+    }
+
+    fun isEmailValid(email: String): Boolean? {
+        val VALID_EMAIL_ADDRESS_REGEX =
+            Pattern.compile("^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$", Pattern.CASE_INSENSITIVE)
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches() && VALID_EMAIL_ADDRESS_REGEX.matcher(email).find()
+    }
+
+    fun isPhoneValid(phone: String): Boolean? {
+        return phone.length == 10
+    }
+
+    fun isPhone(entity: String): Boolean? {
+        var numeric = true
+        numeric = entity.matches("-?\\d+(\\.\\d+)?".toRegex())
+        return numeric
     }
 }

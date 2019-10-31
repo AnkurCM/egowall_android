@@ -2,6 +2,7 @@ package com.coppermobile.android.egowall.net
 
 
 import com.coppermobile.android.egowall.data.URLs
+import com.coppermobile.android.egowall.data.responses.LoginResponse
 import com.coppermobile.android.egowall.data.responses.SignupResponse
 import io.reactivex.Observable
 import okhttp3.RequestBody
@@ -16,5 +17,8 @@ import retrofit2.http.POST
 interface ApiInterface {
     @POST(URLs.REGISTER)
     fun userRegistration(@Body registrationRequest: RequestBody): Observable<SignupResponse>
+
+    @POST(URLs.LOGIN)
+    fun userLogin(@Body registrationRequest: RequestBody): Observable<LoginResponse>
 
 }

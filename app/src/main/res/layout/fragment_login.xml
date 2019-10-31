@@ -47,12 +47,14 @@
             style="@style/LoginTextInputLayoutStyle"
             android:layout_width="match_parent"
             app:errorEnabled="true"
+            app:passwordToggleEnabled="true"
             android:layout_height="wrap_content"
             android:hint="@string/enter_password">
 
         <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tiet_frag_email_phone"
+                android:id="@+id/tiet_frag_login_password"
                 android:layout_width="match_parent"
+                android:inputType="textPassword"
                 android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,10 +65,18 @@
             android:textColor="@drawable/custom_text"
             android:background="@drawable/custom_btn"
             android:textAllCaps="false"
-            android:id="@+id/frag_email_phone_btn_signup"
+            android:id="@+id/btn_frag_login_next"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/next"/>
+
+    <include
+            android:layout_gravity="center"
+            android:id="@+id/progress_bar"
+            layout="@layout/layout_progress"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
 
 
 </LinearLayout>

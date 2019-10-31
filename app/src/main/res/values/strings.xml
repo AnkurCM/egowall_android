@@ -44,7 +44,6 @@
     <string name="enter_email">Enter Email</string>
     <string name="enter_password">Enter Password</string>
     <string name="i_accept_terms_conditions">I accept terms &amp; conditions and privacy policy.</string>
-    <string name="already_a_member_login">Already A Member? LOGIN</string>
     <string name="email_required">Valid Email Required</string>
     <string name="activation_code_required">Please enter valid activation code</string>
     <string name="password_required">Please set atleast 8 to 15 digit alphanumeric password</string>
@@ -149,6 +148,7 @@
     <string name="English">English</string>
     <string name="resend_activation_code">Resend Activation Code</string>
     <string name="email">email</string>
+    <string name="phone">phone</string>
     <string name="skip">Skip</string>
     <string name="please_accept_terms_and_conditions">Please accept terms and conditions to continue</string>
     <string name="audio_permission_message">This app needs to record audio and recognize your speech.</string>
@@ -301,4 +301,5 @@
     <string name="complete_sign_up">Complete Sign up</string>
     <string name="welcome_to_egowall">Welcome To Egowall</string>
     <string name="enter_email_or_phone_number">Enter Email or Phone Number</string>
+    <string name="already_a_member_login">Already have an account! Login</string>
 </resources>
