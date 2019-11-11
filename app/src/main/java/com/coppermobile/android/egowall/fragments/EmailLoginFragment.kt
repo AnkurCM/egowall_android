@@ -15,7 +15,7 @@ import com.coppermobile.android.egowall.net.Resource
 import com.coppermobile.android.egowall.net.Status
 import com.coppermobile.android.egowall.utils.SharedPreferencesHelper
 import com.coppermobile.android.egowall.viewmodels.LoginViewModel
-import kotlinx.android.synthetic.main.fragment_login.*
+import kotlinx.android.synthetic.main.fragment_email_login.*
 
 class EmailLoginFragment : BaseFragment() {
 
@@ -27,7 +27,7 @@ class EmailLoginFragment : BaseFragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        return inflater.inflate(R.layout.fragment_email_login, container, false)
     }
 
 
@@ -41,7 +41,7 @@ class EmailLoginFragment : BaseFragment() {
         loginViewModel!!.response
             .observe(this, Observer<Resource<LoginResponse>> { handleLoginResponse(it!!) })
 
-        btn_frag_login_next.setOnClickListener {
+        frag_email_phone_btn_signup.setOnClickListener {
             sendLoginRequest()
         }
     }
@@ -85,8 +85,8 @@ class EmailLoginFragment : BaseFragment() {
     }
 
     private fun sendLoginRequest() {
-        var password = tiet_frag_login_password.text.toString()
-        var email = tiet_frag_login_email_phone.text.toString()
+        var password = tiet_frag_password.text.toString()
+        var email = tiet_frag_email_phone.text.toString()
         var loginRequest = LoginRequest()
         loginRequest.userEmail = email
         loginRequest.password = password

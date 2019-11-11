@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
+import android.os.Build
 import android.provider.Settings
 import com.coppermobile.android.egowall.R
 import com.coppermobile.android.egowall.fragments.BaseFragment
@@ -12,6 +13,8 @@ import com.coppermobile.android.egowall.interfaces.ISwitchListener
 import com.coppermobile.android.egowall.interfaces.RequestPermissionsListener
 import com.coppermobile.android.egowall.utils.Helpers
 import com.coppermobile.android.egowall.utils.PermissionUtils
+import androidx.core.content.ContextCompat
+import android.view.WindowManager
 
 
 /**
@@ -36,6 +39,15 @@ open class BaseActivity : BaseConnectivityActivity(), ISwitchListener {
      */
     override fun switchFragment(targetFragment: BaseFragment, addToBackStack: Boolean, fragmentTag: String?) {
         //Implementation in activities
+    }
+
+    fun changeStatusBarColor(color : Int){
+
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.statusBarColor = ContextCompat.getColor(this, color)
+        }
     }
 
 

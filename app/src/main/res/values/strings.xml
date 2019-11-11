@@ -9,7 +9,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcome_back">WELCOME BACK</string>
     <string name="invalid_email">Invalid Email</string>
-    <string name="password">Password</string>
+    <string name="email_text">Email *</string>
+    <string name="password">Password *</string>
     <string name="invalid_password">Invalid Password</string>
     <string name="by_signing_in_you_agree_to_our_terms_conditions">
         <![CDATA[By Signing In, you agree to our terms & conditions]]></string>
@@ -299,8 +300,9 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="privacy_policy_accept"><![CDATA[I accept terms & conditions and privacy policy.]]></string>
     <string name="complete_sign_up">Complete Sign up</string>
-    <string name="welcome_to_egowall">Welcome To Egowall</string>
+    <string name="welcome_to_egowall">Welcome to Egowall</string>
     <string name="enter_email_or_phone_number">Enter Email or Phone Number</string>
     <string name="already_a_member_login">Already have an account! Login</string>
     <string name="phone_number">Phone Number</string>
+    <string name="don_t_have_an_account_sign_up">Don’t have an account? Sign Up</string>
 </resources>

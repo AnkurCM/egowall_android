@@ -1,14 +1,23 @@
 package com.coppermobile.android.egowall.activities
 
+import android.graphics.Color
+import android.graphics.Typeface
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.widget.TextView
+import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import com.coppermobile.android.egowall.fragments.BaseFragment
 import kotlinx.android.synthetic.main.activity_onboarding.*
 import androidx.fragment.app.FragmentPagerAdapter
 import com.coppermobile.android.egowall.R
 import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentStatePagerAdapter
 import com.coppermobile.android.egowall.fragments.EmailLoginFragment
 import com.coppermobile.android.egowall.fragments.PhoneNumberLoginFragment
+import com.google.android.material.tabs.TabLayout
 
 
 class OnboardingActivity : BaseActivity() {
@@ -16,26 +25,27 @@ class OnboardingActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_onboarding)
-//        switchFragment(
-//            EmailPhoneFragment(),
-//            false,
-//            getString(R.string.email_phone_data)
-//        )
 
-//        vp_onboarding.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tb_onboarding))
+        changeStatusBarColor(R.color.white)
 
+        val tv = LayoutInflater.from(this@OnboardingActivity).inflate(R.layout.tab_textview, null) as TextView
 
 //        tb_onboarding.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
 //            override fun onTabSelected(tab: TabLayout.Tab) {
 //                vp_onboarding.currentItem = tab.position
+//                tv.typeface = ResourcesCompat.getFont(this@OnboardingActivity, R.font.mulibold)
+//                tab.customView = tv
 //            }
 //
 //            override fun onTabUnselected(tab: TabLayout.Tab) {
-//
+////                val customView = tab.customView as TextView
+////                customView.typeface = ResourcesCompat.getFont(this@OnboardingActivity, R.font.muliregular)
+////                tab.customView = customView
 //            }
 //
 //            override fun onTabReselected(tab: TabLayout.Tab) {
-//
+//                tv.typeface = ResourcesCompat.getFont(this@OnboardingActivity, R.font.mulibold)
+//                tab.customView = tv
 //            }
 //        })
 
@@ -57,7 +67,7 @@ class OnboardingActivity : BaseActivity() {
     }
 
 
-    inner class ViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
+    inner class ViewPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
 
         override fun getItem(position: Int): Fragment {
             var fragment: Fragment? = null
