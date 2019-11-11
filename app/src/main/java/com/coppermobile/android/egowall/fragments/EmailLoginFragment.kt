@@ -17,7 +17,7 @@ import com.coppermobile.android.egowall.utils.SharedPreferencesHelper
 import com.coppermobile.android.egowall.viewmodels.LoginViewModel
 import kotlinx.android.synthetic.main.fragment_login.*
 
-class LoginFragment : BaseFragment() {
+class EmailLoginFragment : BaseFragment() {
 
     private var loginViewModel: LoginViewModel? = null
     var sharedPreferencesHelper: SharedPreferencesHelper? = null

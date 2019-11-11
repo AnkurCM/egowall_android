@@ -302,4 +302,5 @@
     <string name="welcome_to_egowall">Welcome To Egowall</string>
     <string name="enter_email_or_phone_number">Enter Email or Phone Number</string>
     <string name="already_a_member_login">Already have an account! Login</string>
+    <string name="phone_number">Phone Number</string>
 </resources>

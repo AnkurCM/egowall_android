@@ -6,5 +6,5 @@ package com.coppermobile.android.egowall.utils
 
 object Constants {
 
-    const val LOGIN_FRAGMENT = "LoginFragment"
+    const val LOGIN_FRAGMENT = "EmailLoginFragment"
 }
