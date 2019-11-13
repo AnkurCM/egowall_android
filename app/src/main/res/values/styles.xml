@@ -16,6 +16,13 @@
         <item name="boxStrokeColor">#000</item>
         <item name="boxStrokeWidth">2dp</item>
     </style>
+
+    <style name="LoginTextInputLayoutErrorStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/color_EB5757</item>
+        <item name="android:textColor">@color/color_EB5757</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
     <style name="HintText" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">14sp</item>

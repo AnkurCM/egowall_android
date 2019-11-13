@@ -50,7 +50,7 @@
     <string name="password_required">Please set atleast 8 to 15 digit alphanumeric password</string>
     <string name="password_required_text">(Please set atleast 8 digit alphanumeric password)</string>
     <string name="login_in">Login</string>
-    <string name="forgot_password">Forgot Password?</string>
+    <string name="forgot_password">Forgot Password!</string>
     <string name="not_registerd_yet_signup">Not Registered Yet? SIGN UP</string>
     <string name="by_loging_in_you_agree_to_our_terms_conditions">
         <![CDATA[By logging in, you agree to our terms & conditions]]></string>
@@ -305,4 +305,7 @@
     <string name="already_a_member_login">Already have an account! Login</string>
     <string name="phone_number">Phone Number</string>
     <string name="don_t_have_an_account_sign_up">Don’t have an account? Sign Up</string>
+    <string name="check_your_email">Check your email</string>
+    <string name="check_your_password">Check your password</string>
+    <string name="static_open_signup_activity">Open Signup Activity</string>
 </resources>

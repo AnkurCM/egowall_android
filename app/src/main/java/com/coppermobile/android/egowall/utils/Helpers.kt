@@ -123,7 +123,7 @@ object Helpers {
         return sdf1.format(parse)
     }
 
-    fun isEmailValid(email: String): Boolean? {
+    fun isEmailValid(email: String): Boolean {
         val VALID_EMAIL_ADDRESS_REGEX =
             Pattern.compile("^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$", Pattern.CASE_INSENSITIVE)
         return Patterns.EMAIL_ADDRESS.matcher(email).matches() && VALID_EMAIL_ADDRESS_REGEX.matcher(email).find()
