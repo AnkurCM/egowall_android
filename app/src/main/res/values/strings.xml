@@ -304,8 +304,11 @@
     <string name="enter_email_or_phone_number">Enter Email or Phone Number</string>
     <string name="already_a_member_login">Already have an account! Login</string>
     <string name="phone_number">Phone Number</string>
+    <string name="phone_number_text_field">Phone Number *</string>
     <string name="don_t_have_an_account_sign_up">Don’t have an account? Sign Up</string>
     <string name="check_your_email">Check your email</string>
     <string name="check_your_password">Check your password</string>
     <string name="static_open_signup_activity">Open Signup Activity</string>
+    <string name="check_your_phone_number">Check your phone number</string>
+    <string name="flag_list">flag_list</string>
 </resources>

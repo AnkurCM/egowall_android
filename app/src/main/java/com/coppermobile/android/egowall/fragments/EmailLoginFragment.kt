@@ -59,7 +59,6 @@ class EmailLoginFragment : BaseFragment() {
             sendLoginRequest()
         }
 
-        tiet_frag_password.transformationMethod = PasswordTransformationMethod()
 
         emailTextWatchers()
         passwordTextWatchers()

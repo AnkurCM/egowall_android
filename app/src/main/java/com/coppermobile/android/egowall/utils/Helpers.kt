@@ -129,7 +129,7 @@ object Helpers {
         return Patterns.EMAIL_ADDRESS.matcher(email).matches() && VALID_EMAIL_ADDRESS_REGEX.matcher(email).find()
     }
 
-    fun isPhoneValid(phone: String): Boolean? {
+    fun isPhoneValid(phone: String): Boolean {
         return phone.length == 10
     }
 

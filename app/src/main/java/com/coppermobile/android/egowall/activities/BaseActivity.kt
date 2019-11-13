@@ -41,6 +41,13 @@ open class BaseActivity : BaseConnectivityActivity(), ISwitchListener {
         //Implementation in activities
     }
 
+
+    fun setFullScreenActivity() {
+//        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+    }
+
+
     fun changeStatusBarColor(color : Int){
 
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
