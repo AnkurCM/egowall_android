@@ -1,5 +1,6 @@
 package com.coppermobile.android.egowall.fragments
 
+import android.content.res.ColorStateList
 import android.os.Bundle
 import android.text.*
 import android.util.Log
@@ -24,6 +25,7 @@ import android.widget.TextView
 import android.text.style.ClickableSpan
 import android.text.style.ForegroundColorSpan
 import android.widget.Toast
+import androidx.core.view.ViewCompat
 import com.coppermobile.android.egowall.R
 
 
@@ -73,7 +75,7 @@ class EmailLoginFragment : BaseFragment() {
         val ss = SpannableString(signUpText)
         val clickableSpan = object : ClickableSpan() {
             override fun onClick(textView: View) {
-               Toast.makeText(activity!!, getString(R.string.static_open_signup_activity), Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity!!, getString(R.string.static_open_signup_activity), Toast.LENGTH_SHORT).show()
             }
         }
         ss.setSpan(clickableSpan, 23, signUpText.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
@@ -117,14 +119,17 @@ class EmailLoginFragment : BaseFragment() {
     private fun emailTextWatchers() {
         tiet_frag_email_phone.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                if (s.toString() != "" && tiet_frag_password.text.toString() != "") {
-                    frag_email_phone_btn_signup.isEnabled = true
-                    frag_email_phone_btn_signup.background =
-                        ContextCompat.getDrawable(activity!!, R.drawable.btn_login_filled)
-                    frag_email_phone_btn_signup.setTextColor(ContextCompat.getColor(activity!!, R.color.white))
+                if (s.toString() != "") {
 
+                    if (tiet_frag_password.text.toString() != "") {
+                        frag_email_phone_btn_signup.isEnabled = true
+                        frag_email_phone_btn_signup.background =
+                            ContextCompat.getDrawable(activity!!, R.drawable.btn_login_filled)
+                        frag_email_phone_btn_signup.setTextColor(ContextCompat.getColor(activity!!, R.color.white))
+                    }
 
                 } else {
+
                     frag_email_phone_btn_signup.isEnabled = false
                     frag_email_phone_btn_signup.background =
                         ContextCompat.getDrawable(activity!!, R.drawable.btn_login_filled)
@@ -138,6 +143,14 @@ class EmailLoginFragment : BaseFragment() {
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 til_frag_email_phone.error = null
+
+                if (s!= null && s.isNotEmpty()){
+                    til_frag_email_phone.setHintTextAppearance(R.style.LoginTextInputLayoutFilledStyle)
+                    til_frag_email_phone.boxStrokeColor = ContextCompat.getColor(activity!!, R.color.color_479EA1)
+                } else{
+                    til_frag_email_phone.setHintTextAppearance(R.style.LoginTextInputLayoutStyle)
+                    til_frag_email_phone.boxStrokeColor = ContextCompat.getColor(activity!!, R.color.black)
+                }
             }
 
         })
@@ -147,16 +160,21 @@ class EmailLoginFragment : BaseFragment() {
     private fun passwordTextWatchers() {
         tiet_frag_password.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                if (s.toString() != "" && tiet_frag_email_phone.text.toString() != "") {
-                    frag_email_phone_btn_signup.isEnabled = true
-                    frag_email_phone_btn_signup.background =
-                        ContextCompat.getDrawable(activity!!, R.drawable.btn_login_filled)
-                    frag_email_phone_btn_signup.setTextColor(ContextCompat.getColor(activity!!, R.color.colorPrimary))
+
+                if (s.toString() != "") {
+
+                    if (tiet_frag_email_phone.text.toString() != "") {
+                        frag_email_phone_btn_signup.isEnabled = true
+                        frag_email_phone_btn_signup.background =
+                            ContextCompat.getDrawable(activity!!, R.drawable.btn_login_filled)
+                        frag_email_phone_btn_signup.setTextColor(ContextCompat.getColor(activity!!, R.color.white))
+                    }
                 } else {
+
                     frag_email_phone_btn_signup.isEnabled = false
                     frag_email_phone_btn_signup.background =
                         ContextCompat.getDrawable(activity!!, R.drawable.btn_login_filled)
-                    frag_email_phone_btn_signup.setTextColor(ContextCompat.getColor(activity!!, R.color.colorAccent))
+                    frag_email_phone_btn_signup.setTextColor(ContextCompat.getColor(activity!!, R.color.white))
                 }
             }
 
@@ -166,6 +184,13 @@ class EmailLoginFragment : BaseFragment() {
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 til_frag_password.error = null
+                if (s!= null && s.isNotEmpty()){
+                    til_frag_password.setHintTextAppearance(R.style.LoginTextInputLayoutFilledStyle)
+                    til_frag_password.boxStrokeColor = ContextCompat.getColor(activity!!, R.color.color_479EA1)
+                } else{
+                    til_frag_password.setHintTextAppearance(R.style.LoginTextInputLayoutStyle)
+                    til_frag_password.boxStrokeColor = ContextCompat.getColor(activity!!, R.color.black)
+                }
             }
 
         })

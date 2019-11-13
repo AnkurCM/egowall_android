@@ -49,6 +49,15 @@
                 android:hint="@string/password"
                 app:passwordToggleEnabled="true">
 
+            <!--<TextView-->
+                    <!--android:id="@+id/tv_login_phone_country_code"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="+33"-->
+                    <!--android:fontFamily="@font/muliregular"-->
+                    <!--android:textSize="@dimen/font_16"-->
+                    <!--android:textColor="@color/black"/>-->
+
             <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_login_password"
                     android:layout_width="match_parent"

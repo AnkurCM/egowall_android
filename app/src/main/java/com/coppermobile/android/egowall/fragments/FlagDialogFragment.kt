@@ -16,6 +16,7 @@ import com.coppermobile.android.egowall.R
 import com.coppermobile.android.egowall.adapters.FlagAdapter
 import com.coppermobile.android.egowall.interfaces.ICloseFragment
 import com.coppermobile.android.egowall.interfaces.IFlagUpdates
+import com.coppermobile.android.egowall.utils.Helpers
 import kotlinx.android.synthetic.main.fragment_flag_dialog.*
 import java.util.ArrayList
 
@@ -26,6 +27,7 @@ class FlagDialogFragment(private var iFlagUpdates: IFlagUpdates) : DialogFragmen
     }
 
     override fun close() {
+        Helpers.hideKeyboard(activity!!)
         dismiss()
     }
 

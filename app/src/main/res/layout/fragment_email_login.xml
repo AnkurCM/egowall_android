@@ -18,7 +18,6 @@
         <com.google.android.material.textfield.TextInputLayout
                 android:layout_marginTop="@dimen/size_20"
                 android:id="@+id/til_frag_email_phone"
-                app:hintTextAppearance="@style/HintText"
                 app:errorTextAppearance="@style/LoginTextInputLayoutErrorStyle"
                 style="@style/LoginTextInputLayoutStyle"
                 android:layout_width="match_parent"
