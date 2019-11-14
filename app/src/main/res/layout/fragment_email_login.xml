@@ -16,21 +16,25 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-                android:layout_marginTop="@dimen/size_20"
                 android:id="@+id/til_frag_email_phone"
-                app:errorTextAppearance="@style/LoginTextInputLayoutErrorStyle"
-                style="@style/LoginTextInputLayoutStyle"
                 android:layout_width="match_parent"
-                app:errorEnabled="true"
                 android:layout_height="wrap_content"
-                android:hint="@string/email_text">
+                android:layout_marginTop="@dimen/size_20"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopEnd="@dimen/size_6"
+                app:boxCornerRadiusBottomEnd="@dimen/size_6"
+                app:boxCornerRadiusBottomStart="@dimen/size_6"
+                app:boxCornerRadiusTopStart="@dimen/size_6"
+                app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tiet_frag_email_phone"
+                    android:id="@+id/et_login_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
-                    android:fontFamily="@font/muliregular"/>
+                    android:fontFamily="@font/muliregular"
+                    android:hint="@string/email_text"
+                    android:padding="@dimen/size_16"/>
         </com.google.android.material.textfield.TextInputLayout>
 
 

@@ -1,6 +1,5 @@
 package com.coppermobile.android.egowall.fragments
 
-import android.content.res.ColorStateList
 import android.os.Bundle
 import android.text.*
 import android.util.Log
@@ -17,16 +16,13 @@ import com.coppermobile.android.egowall.net.Status
 import com.coppermobile.android.egowall.utils.SharedPreferencesHelper
 import com.coppermobile.android.egowall.viewmodels.LoginViewModel
 import kotlinx.android.synthetic.main.fragment_email_login.*
-import android.text.method.PasswordTransformationMethod
 import androidx.core.content.ContextCompat
 import com.coppermobile.android.egowall.utils.Helpers
-import android.text.method.LinkMovementMethod
-import android.widget.TextView
 import android.text.style.ClickableSpan
 import android.text.style.ForegroundColorSpan
 import android.widget.Toast
-import androidx.core.view.ViewCompat
 import com.coppermobile.android.egowall.R
+import kotlinx.android.synthetic.main.fragment_phone_number_login.*
 
 
 class LoginEmailFragment : BaseFragment() {
@@ -98,8 +94,8 @@ class LoginEmailFragment : BaseFragment() {
     }
 
     private fun validateData(): Boolean {
-        val email = tiet_frag_email_phone.text.toString()
-        val password = tiet_frag_password.text.toString()
+        val email = et_login_email.text.toString()
+        val password = et_login_password.text.toString()
 
         if (Helpers.isEmailValid(email) && Helpers.isValidPassword(password)) {
             return true
@@ -117,7 +113,7 @@ class LoginEmailFragment : BaseFragment() {
 
 
     private fun emailTextWatchers() {
-        tiet_frag_email_phone.addTextChangedListener(object : TextWatcher {
+        et_login_email.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 if (s.toString() != "") {
 
@@ -143,14 +139,6 @@ class LoginEmailFragment : BaseFragment() {
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 til_frag_email_phone.error = null
-
-                if (s!= null && s.isNotEmpty()){
-                    til_frag_email_phone.setHintTextAppearance(R.style.LoginTextInputLayoutFilledStyle)
-                    til_frag_email_phone.boxStrokeColor = ContextCompat.getColor(activity!!, R.color.color_479EA1)
-                } else{
-                    til_frag_email_phone.setHintTextAppearance(R.style.LoginTextInputLayoutStyle)
-                    til_frag_email_phone.boxStrokeColor = ContextCompat.getColor(activity!!, R.color.black)
-                }
             }
 
         })
@@ -163,7 +151,7 @@ class LoginEmailFragment : BaseFragment() {
 
                 if (s.toString() != "") {
 
-                    if (tiet_frag_email_phone.text.toString() != "") {
+                    if (et_login_email.text.toString() != "") {
                         frag_email_phone_btn_signup.isEnabled = true
                         frag_email_phone_btn_signup.background =
                             ContextCompat.getDrawable(activity!!, R.drawable.btn_login_filled)
@@ -184,13 +172,6 @@ class LoginEmailFragment : BaseFragment() {
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 til_frag_password.error = null
-                if (s!= null && s.isNotEmpty()){
-                    til_frag_password.setHintTextAppearance(R.style.LoginTextInputLayoutFilledStyle)
-                    til_frag_password.boxStrokeColor = ContextCompat.getColor(activity!!, R.color.color_479EA1)
-                } else{
-                    til_frag_password.setHintTextAppearance(R.style.LoginTextInputLayoutStyle)
-                    til_frag_password.boxStrokeColor = ContextCompat.getColor(activity!!, R.color.black)
-                }
             }
 
         })
@@ -237,7 +218,7 @@ class LoginEmailFragment : BaseFragment() {
 
     private fun sendLoginRequest() {
         var password = tiet_frag_password.text.toString()
-        var email = tiet_frag_email_phone.text.toString()
+        var email = et_login_email.text.toString()
         var loginRequest = LoginRequest()
         loginRequest.userEmail = email
         loginRequest.password = password

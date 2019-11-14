@@ -37,7 +37,7 @@ class EmailPhoneFragment : BaseFragment() {
 
         frag_email_phone_btn_signup.setOnClickListener {
             Helpers.hideKeyboard(activity!!)
-            var entity = tiet_frag_email_phone.text.toString()
+            var entity = et_login_email.text.toString()
             if (emailPhoneViewModel!!.handleInput(entity)!!) {
                 saveEntityToSP("email", entity)
                 signupFragment = SignupFragment()
