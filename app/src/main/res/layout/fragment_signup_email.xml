@@ -19,6 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:hintTextAppearance="@style/HintText"
+                app:errorTextAppearance="@style/LoginTextInputLayoutErrorStyle"
                 style="@style/LoginTextInputLayoutStyle"
                 app:errorEnabled="true"
                 android:layout_marginTop="@dimen/size_40"
@@ -41,6 +42,7 @@
                 android:background="@drawable/custom_btn"
                 android:textAllCaps="false"
                 android:text="@string/next"
+                android:enabled="false"
                 android:fontFamily="@font/mulibold"/>
 
 

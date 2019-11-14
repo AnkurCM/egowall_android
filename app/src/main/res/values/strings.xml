@@ -305,4 +305,7 @@
     <string name="phone_number">Phone Number</string>
     <string name="sign_up_to_egowall">Sign up to Egowall</string>
     <string name="email_text">Email *</string>
+    <string name="phone_number_text">Phone Number *</string>
+    <string name="check_your_email">Check your email</string>
+    <string name="check_your_phone_number">Check your phone number</string>
 </resources>

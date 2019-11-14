@@ -19,6 +19,7 @@ import com.coppermobile.android.egowall.utils.Helpers
 import com.coppermobile.android.egowall.utils.SharedPreferencesHelper
 import com.coppermobile.android.egowall.viewmodels.EmailPhoneViewModel
 import kotlinx.android.synthetic.main.fragment_signup_email.*
+import kotlinx.android.synthetic.main.fragment_signup_email.tv_signup_login_option
 
 
 class SignupEmailFragment : BaseFragment() {
@@ -45,9 +46,9 @@ class SignupEmailFragment : BaseFragment() {
         emailTextWatcher()
     }
 
-    private fun emailTextWatcher(){
+    private fun emailTextWatcher() {
 
-        et_signup_email.addTextChangedListener(object : TextWatcher{
+        et_signup_email.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 if (s.toString() != "") {
 
@@ -75,10 +76,10 @@ class SignupEmailFragment : BaseFragment() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 til_signup_email.error = null
 
-                if (s!= null && s.isNotEmpty()){
+                if (s != null && s.isNotEmpty()) {
                     til_signup_email.setHintTextAppearance(R.style.LoginTextInputLayoutFilledStyle)
                     til_signup_email.boxStrokeColor = ContextCompat.getColor(activity!!, R.color.color_479EA1)
-                } else{
+                } else {
                     til_signup_email.setHintTextAppearance(R.style.LoginTextInputLayoutStyle)
                     til_signup_email.boxStrokeColor = ContextCompat.getColor(activity!!, R.color.black)
                 }
@@ -92,13 +93,32 @@ class SignupEmailFragment : BaseFragment() {
 
         bt_signup_email_next.setOnClickListener {
             Helpers.hideKeyboard(activity!!)
-            val entity = et_signup_email.text.toString()
-            if (emailPhoneViewModel!!.handleInput(entity)!!) {
-                saveEntityToSP("email", entity)
-                signupFragment = SignupFragment()
-                switchFragment(signupFragment!!, true, getString(R.string.signup_fragment))
+//            val entity = et_signup_email.text.toString()
+//            if (emailPhoneViewModel!!.handleInput(entity)!!) {
+//                saveEntityToSP("email", entity)
+//                signupFragment = SignupFragment()
+//                switchFragment(signupFragment!!, true, getString(R.string.signup_fragment))
+//            }
+            if (validateData()) {
+
             }
         }
+    }
+
+    private fun validateData(): Boolean {
+
+        val email = et_signup_email.text.toString()
+
+        if (Helpers.isEmailValid(email)) {
+            return true
+        } else {
+
+            if (email == "" || !Helpers.isEmailValid(email)) {
+                til_signup_email.error = getString(R.string.check_your_email)
+            }
+        }
+        return false
+
     }
 
     private fun saveEntityToSP(s: String, entity: String) {
