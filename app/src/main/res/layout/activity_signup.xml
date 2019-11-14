@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ll_signup_root_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        tools:context=".activities.OnboardingActivity">
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/logo_signup"
+            android:layout_marginTop="@dimen/size_30"
+            android:contentDescription="@string/egowall_image_is_not_found"/>
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up_to_egowall"
+            android:fontFamily="@font/mulibold"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font_17"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/size_2"/>
+
+    <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tb_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_34"
+            app:tabTextColor="@color/color_479EA1"
+            app:tabIndicatorColor="@color/color_479EA1"
+            style="@style/CustomTabLayout"/>
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_signup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+</LinearLayout>

@@ -23,7 +23,7 @@ class SplashActivity : AppCompatActivity() {
 //                    val resultIntent = Intent(this, HomeActivity::class.java)
 //                    startActivity(resultIntent)
 //                } else {
-            startActivity(Intent(this, OnboardingActivity::class.java))
+            startActivity(Intent(this, SignupActivity::class.java))
 //                }
 
 //            }
