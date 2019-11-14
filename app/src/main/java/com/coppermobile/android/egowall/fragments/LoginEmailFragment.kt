@@ -1,5 +1,8 @@
 package com.coppermobile.android.egowall.fragments
 
+import android.content.res.ColorStateList
+import android.graphics.PorterDuff
+import android.os.Build
 import android.os.Bundle
 import android.text.*
 import android.util.Log
@@ -21,6 +24,7 @@ import com.coppermobile.android.egowall.utils.Helpers
 import android.text.style.ClickableSpan
 import android.text.style.ForegroundColorSpan
 import android.widget.Toast
+import androidx.core.view.ViewCompat
 import com.coppermobile.android.egowall.R
 import kotlinx.android.synthetic.main.fragment_phone_number_login.*
 
@@ -116,6 +120,17 @@ class LoginEmailFragment : BaseFragment() {
         et_login_email.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 if (s.toString() != "") {
+
+
+                    val colorStateList =
+                        ColorStateList.valueOf(ContextCompat.getColor(activity!!, R.color.color_479EA1))
+//                    ViewCompat.setBackgroundTintList(et_login_email, colorStateList)
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        et_login_email.backgroundTintList = colorStateList
+                    }
+
+
+//                    til_frag_email_phone.boxStrokeColor = ContextCompat.getColor(activity!!, R.color.color_479EA1)
 
                     if (tiet_frag_password.text.toString() != "") {
                         frag_email_phone_btn_signup.isEnabled = true

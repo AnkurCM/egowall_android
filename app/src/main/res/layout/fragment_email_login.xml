@@ -20,20 +20,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/size_20"
-                app:boxBackgroundMode="outline"
-                app:boxCornerRadiusTopEnd="@dimen/size_6"
-                app:boxCornerRadiusBottomEnd="@dimen/size_6"
-                app:boxCornerRadiusBottomStart="@dimen/size_6"
-                app:boxCornerRadiusTopStart="@dimen/size_6"
-                app:errorEnabled="true">
+                android:hint="@string/email_text"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/black"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                     android:id="@+id/et_login_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
                     android:fontFamily="@font/muliregular"
-                    android:hint="@string/email_text"
                     android:padding="@dimen/size_16"/>
         </com.google.android.material.textfield.TextInputLayout>
 
