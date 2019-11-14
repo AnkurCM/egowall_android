@@ -7,7 +7,7 @@
         android:padding="@dimen/size_30"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".fragments.PhoneNumberLoginFragment">
+        tools:context=".fragments.LoginPhoneNumberFragment">
 
     <LinearLayout
             android:layout_width="match_parent"

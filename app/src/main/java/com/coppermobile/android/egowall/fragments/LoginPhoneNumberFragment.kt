@@ -28,7 +28,7 @@ import com.coppermobile.android.egowall.viewmodels.LoginViewModel
 import kotlinx.android.synthetic.main.fragment_phone_number_login.*
 
 
-class PhoneNumberLoginFragment : Fragment(), IFlagUpdates {
+class LoginPhoneNumberFragment : Fragment(), IFlagUpdates {
     override fun flagDetail(flagDetail: String) {
         Toast.makeText(activity!!, flagDetail, Toast.LENGTH_SHORT).show()
     }

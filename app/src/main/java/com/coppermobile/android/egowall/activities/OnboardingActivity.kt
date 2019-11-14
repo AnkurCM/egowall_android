@@ -1,23 +1,16 @@
 package com.coppermobile.android.egowall.activities
 
-import android.graphics.Color
-import android.graphics.Typeface
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.widget.TextView
-import androidx.core.content.ContextCompat
-import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import com.coppermobile.android.egowall.fragments.BaseFragment
 import kotlinx.android.synthetic.main.activity_onboarding.*
-import androidx.fragment.app.FragmentPagerAdapter
 import com.coppermobile.android.egowall.R
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import com.coppermobile.android.egowall.fragments.EmailLoginFragment
-import com.coppermobile.android.egowall.fragments.PhoneNumberLoginFragment
-import com.google.android.material.tabs.TabLayout
+import com.coppermobile.android.egowall.fragments.LoginEmailFragment
+import com.coppermobile.android.egowall.fragments.LoginPhoneNumberFragment
 
 
 class OnboardingActivity : BaseActivity() {
@@ -72,8 +65,8 @@ class OnboardingActivity : BaseActivity() {
         override fun getItem(position: Int): Fragment {
             var fragment: Fragment? = null
             when (position) {
-                0 -> fragment = EmailLoginFragment()
-                1 -> fragment = PhoneNumberLoginFragment()
+                0 -> fragment = LoginEmailFragment()
+                1 -> fragment = LoginPhoneNumberFragment()
             }
             return fragment!!
         }

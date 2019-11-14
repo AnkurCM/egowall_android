@@ -29,7 +29,7 @@ import androidx.core.view.ViewCompat
 import com.coppermobile.android.egowall.R
 
 
-class EmailLoginFragment : BaseFragment() {
+class LoginEmailFragment : BaseFragment() {
 
     private var loginViewModel: LoginViewModel? = null
     var sharedPreferencesHelper: SharedPreferencesHelper? = null

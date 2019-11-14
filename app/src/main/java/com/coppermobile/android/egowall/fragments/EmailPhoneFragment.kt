@@ -46,7 +46,7 @@ class EmailPhoneFragment : BaseFragment() {
         }
 
         tv_frag_email_phone_login.setOnClickListener {
-            switchFragment(EmailLoginFragment(), true, getString(R.string.login))
+            switchFragment(LoginEmailFragment(), true, getString(R.string.login))
         }
     }
 
