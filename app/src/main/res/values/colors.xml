@@ -21,4 +21,7 @@
     <color name="blue_shadow">#332F80ED</color>
     <color name="blue_shadow_transparent">#1A2F80ED</color>
     <color name="subscription_card_shadow">#33000000</color>
+    <color name="color_479EA1">#479EA1</color>
+    <color name="color_F3A248">#F3A248</color>
+    <color name="color_EB5757">#EB5757</color>
 </resources>

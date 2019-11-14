@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.SignupEmailFragment">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/size_30">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_signup_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintTextAppearance="@style/HintText"
+                app:errorTextAppearance="@style/LoginTextInputLayoutErrorStyle"
+                style="@style/LoginTextInputLayoutStyle"
+                app:errorEnabled="true"
+                android:layout_marginTop="@dimen/size_40"
+                android:hint="@string/email_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_signup_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/muliregular"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+                android:id="@+id/bt_signup_email_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_60"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@drawable/custom_text"
+                android:background="@drawable/custom_btn"
+                android:textAllCaps="false"
+                android:text="@string/next"
+                android:enabled="false"
+                android:fontFamily="@font/mulibold"/>
+
+
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/tv_signup_login_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size_16"
+            android:text="@string/already_a_member_login"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_14"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/muliregular"
+            android:layout_marginBottom="@dimen/size_50"/>
+
+
+</RelativeLayout>
