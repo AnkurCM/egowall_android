@@ -42,7 +42,7 @@
     <string name="login_activity">Login Activity</string>
     <string name="welcome">Welcome</string>
     <string name="enter_email">Enter Email</string>
-    <string name="enter_password">Enter Password</string>
+    <string name="enter_password">Enter Password *</string>
     <string name="i_accept_terms_conditions">I accept terms &amp; conditions and privacy policy.</string>
     <string name="email_required">Valid Email Required</string>
     <string name="activation_code_required">Please enter valid activation code</string>
@@ -294,11 +294,9 @@
     <string name="subscribe">Subscribe</string>
     <string name="guest_login_date">guest_login_date</string>
     <string name="start_time">start_time</string>
-    <string name="first_name">First Name</string>
-    <string name="last_name">Last Name</string>
-    <string name="confirm_password">Confirm Password</string>
+    <string name="last_name">Last Name *</string>
+    <string name="confirm_password">Confirm Password *</string>
     <string name="privacy_policy_accept"><![CDATA[I accept terms & conditions and privacy policy.]]></string>
-    <string name="complete_sign_up">Complete Sign up</string>
     <string name="welcome_to_egowall">Welcome To Egowall</string>
     <string name="enter_email_or_phone_number">Enter Email or Phone Number</string>
     <string name="already_a_member_login">Already have an account! Login</string>
@@ -308,4 +306,10 @@
     <string name="phone_number_text">Phone Number *</string>
     <string name="check_your_email">Check your email</string>
     <string name="check_your_phone_number">Check your phone number</string>
+    <string name="complete_sign_up">Complete Sign up</string>
+    <string name="first_name">First Name*</string>
+    <string name="first_name_required">First name required</string>
+    <string name="last_name_required">Last name required</string>
+    <string name="password_error">Password must be alphanumeric and 8 characters long</string>
+    <string name="password_doesnt_match">Password doesn\'t match</string>
 </resources>

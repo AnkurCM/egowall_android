@@ -1,6 +1,7 @@
 package com.coppermobile.android.egowall.fragments
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
@@ -14,6 +15,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProviders
 import com.coppermobile.android.egowall.R
+import com.coppermobile.android.egowall.activities.CompleteSignupActivity
 import com.coppermobile.android.egowall.factories.ViewModelFactory
 import com.coppermobile.android.egowall.utils.Helpers
 import com.coppermobile.android.egowall.utils.SharedPreferencesHelper
@@ -27,7 +29,7 @@ class SignupEmailFragment : BaseFragment() {
 
     var sharedPreferencesHelper: SharedPreferencesHelper? = null
     var emailPhoneViewModel: EmailPhoneViewModel? = null
-    var signupFragment: SignupFragment? = null
+    var signupFragment: CompleteSignupFragment? = null
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -96,11 +98,12 @@ class SignupEmailFragment : BaseFragment() {
 //            val entity = et_signup_email.text.toString()
 //            if (emailPhoneViewModel!!.handleInput(entity)!!) {
 //                saveEntityToSP("email", entity)
-//                signupFragment = SignupFragment()
+//                signupFragment = CompleteSignupFragment()
 //                switchFragment(signupFragment!!, true, getString(R.string.signup_fragment))
 //            }
             if (validateData()) {
-
+                sharedPreferencesHelper?.putString(getString(R.string.email), et_signup_email.text.toString())
+                startActivity(Intent(activity!!, CompleteSignupActivity::class.java))
             }
         }
     }

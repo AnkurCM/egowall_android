@@ -96,7 +96,7 @@ class LoginFragment : BaseFragment() {
     }
 
     private fun showLoading(show: Boolean) {
-        progress_bar.visibility = if (show) View.VISIBLE else View.GONE
+        pb_complete_signup.visibility = if (show) View.VISIBLE else View.GONE
     }
 
 

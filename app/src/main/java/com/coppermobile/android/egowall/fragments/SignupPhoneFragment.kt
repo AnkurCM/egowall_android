@@ -2,6 +2,7 @@ package com.coppermobile.android.egowall.fragments
 
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
@@ -16,11 +17,11 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProviders
 
 import com.coppermobile.android.egowall.R
+import com.coppermobile.android.egowall.activities.CompleteSignupActivity
 import com.coppermobile.android.egowall.factories.ViewModelFactory
 import com.coppermobile.android.egowall.utils.Helpers
 import com.coppermobile.android.egowall.utils.SharedPreferencesHelper
 import com.coppermobile.android.egowall.viewmodels.EmailPhoneViewModel
-import kotlinx.android.synthetic.main.fragment_signup_email.*
 import kotlinx.android.synthetic.main.fragment_signup_phone.*
 import kotlinx.android.synthetic.main.fragment_signup_phone.tv_signup_login_option
 
@@ -28,7 +29,7 @@ class SignupPhoneFragment : BaseFragment() {
 
     var sharedPreferencesHelper: SharedPreferencesHelper? = null
     var emailPhoneViewModel: EmailPhoneViewModel? = null
-    var signupFragment: SignupFragment? = null
+    var signupFragment: CompleteSignupFragment? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -100,7 +101,8 @@ class SignupPhoneFragment : BaseFragment() {
             Helpers.hideKeyboard(activity!!)
 
             if (validateData()) {
-
+                sharedPreferencesHelper?.putString(getString(R.string.phone), et_signup_phone.text.toString())
+                startActivity(Intent(activity!!, CompleteSignupActivity::class.java))
             }
         }
     }
