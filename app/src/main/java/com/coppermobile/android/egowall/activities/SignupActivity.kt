@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import com.coppermobile.android.egowall.R
-import com.coppermobile.android.egowall.fragments.BaseFragment
 import com.coppermobile.android.egowall.fragments.SignupEmailFragment
 import com.coppermobile.android.egowall.fragments.SignupPhoneFragment
 import kotlinx.android.synthetic.main.activity_signup.*
@@ -23,16 +22,6 @@ class SignupActivity : BaseActivity() {
 
         tb_signup.setupWithViewPager(vp_signup)
 
-    }
-
-    override fun switchFragment(targetFragment: BaseFragment, addToBackStack: Boolean, fragmentTag: String?) {
-        super.switchFragment(targetFragment, addToBackStack, fragmentTag)
-        val fragmentTransaction = supportFragmentManager.beginTransaction()
-        if (addToBackStack) {
-            fragmentTransaction.addToBackStack(null)
-        }
-        fragmentTransaction.replace(R.id.ll_signup_root_container, targetFragment, fragmentTag)
-        fragmentTransaction.commit()
     }
 
     inner class SignupViewPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
