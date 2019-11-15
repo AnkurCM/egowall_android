@@ -97,12 +97,14 @@
             app:errorTextAppearance="@style/LoginTextInputLayoutErrorStyle"
             style="@style/LoginTextInputLayoutStyle"
             app:errorEnabled="true"
+            app:passwordToggleEnabled="true"
             android:hint="@string/confirm_password">
 
         <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_complete_signup_confirm_password"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <RadioButton

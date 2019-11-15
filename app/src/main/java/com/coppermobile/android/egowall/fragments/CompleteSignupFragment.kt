@@ -237,6 +237,11 @@ class CompleteSignupFragment : BaseFragment() {
             Helpers.hideKeyboard(activity!!)
             if (validateData()) {
 //                sendRegisterRequest()
+
+                til_complete_signup_first_name.error = null
+                til_complete_signup_last_name.error = null
+                til_complete_signup_password.error = null
+                til_complete_signup_confirm_password.error = null
             }
         }
     }
@@ -251,7 +256,7 @@ class CompleteSignupFragment : BaseFragment() {
 
         if (Helpers.isNameValid(firstName) && Helpers.isNameValid(lastName) && Helpers.isPasswordValid(password) && Helpers.isPasswordValid(
                 confirmPassword
-            )
+            ) && password == confirmPassword
         ) {
             return true
         } else {
@@ -266,12 +271,10 @@ class CompleteSignupFragment : BaseFragment() {
                 til_complete_signup_password.error = getString(R.string.password_error)
             }
             if (confirmPassword == "" || !Helpers.isPasswordValid(confirmPassword)) {
-
-                if (et_complete_signup_password.text.toString() != et_complete_signup_confirm_password.text.toString()) {
-                    til_complete_signup_confirm_password.error = getString(R.string.password_doesnt_match)
-                } else{
-                    til_complete_signup_confirm_password.error = getString(R.string.password_error)
-                }
+                til_complete_signup_confirm_password.error = getString(R.string.password_error)
+            } else if (password != confirmPassword) {
+                til_complete_signup_confirm_password.error = getString(R.string.password_doesnt_match)
+                til_complete_signup_password.error = " "
             }
         }
         return false
