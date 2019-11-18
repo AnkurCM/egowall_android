@@ -31,25 +31,21 @@
         <item name="boxStrokeWidth">2dp</item>
     </style>
 
+
     <style name="LoginTextInputLayoutFilledStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="boxStrokeColor">@color/color_479EA1</item>
         <item name="android:textColor">@color/color_479EA1</item>
         <item name="boxStrokeWidth">2dp</item>
     </style>
 
+
     <style name="HintText" parent="TextAppearance.AppCompat">
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">14sp</item>
     </style>
-
     <style name="CustomTabLayout" parent="TextAppearance.Design.Tab">
         <item name="textAllCaps">true</item>
         <item name="android:textAllCaps">true</item>
     </style>
-
-
-    <!--<style name="LoginTextInputLayoutStyle1" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">-->
-        <!--<item name="colorAccent">#479EA1</item>-->
-    <!--</style>-->
 
 </resources>

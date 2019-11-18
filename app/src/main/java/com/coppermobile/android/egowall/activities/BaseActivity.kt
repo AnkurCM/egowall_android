@@ -9,7 +9,6 @@ import android.provider.Settings
 import com.coppermobile.android.egowall.R
 import com.coppermobile.android.egowall.fragments.BaseFragment
 import com.coppermobile.android.egowall.interfaces.AlertDialogCallback
-import com.coppermobile.android.egowall.interfaces.ISwitchListener
 import com.coppermobile.android.egowall.interfaces.RequestPermissionsListener
 import com.coppermobile.android.egowall.utils.Helpers
 import com.coppermobile.android.egowall.utils.PermissionUtils
@@ -21,7 +20,7 @@ import android.view.WindowManager
  * Created by Noopur on 30, January, 2019
  * Base activity class to extend by every activity
  */
-open class BaseActivity : BaseConnectivityActivity(), ISwitchListener {
+open class BaseActivity : BaseConnectivityActivity() {
     private val AUDIO_RECORD = 100
     private val EXTERNAL_STORAGE = 102
     private val SETTINGS_CODE = 101
@@ -37,18 +36,17 @@ open class BaseActivity : BaseConnectivityActivity(), ISwitchListener {
      * @param addToBackStack true, if we want to add fragment into stack and false, if we don't want to add fragment into stack.
      * @param fragmentTag    Tag of the fragment to be open on activity.
      */
-    override fun switchFragment(targetFragment: BaseFragment, addToBackStack: Boolean, fragmentTag: String?) {
-        //Implementation in activities
+    fun switchFragment(targetFragment: BaseFragment, addToBackStack: Boolean, fragmentTag: String?, rootContainer : Int) {
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        if (addToBackStack) {
+            fragmentTransaction.addToBackStack(null)
+        }
+        fragmentTransaction.replace(rootContainer, targetFragment, fragmentTag)
+        fragmentTransaction.commit()
     }
 
 
-    fun setFullScreenActivity() {
-//        requestWindowFeature(Window.FEATURE_NO_TITLE)
-        this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
-    }
-
-
-    fun changeStatusBarColor(color : Int){
+    fun changeStatusBarColor(color: Int) {
 
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
@@ -57,6 +55,11 @@ open class BaseActivity : BaseConnectivityActivity(), ISwitchListener {
         }
     }
 
+
+    fun setFullScreenActivity() {
+//        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+    }
 
     fun hasAudioPermission(): Boolean {
         return PermissionUtils.hasPermission(this, Manifest.permission.RECORD_AUDIO)

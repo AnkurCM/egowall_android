@@ -101,14 +101,14 @@ class LoginEmailFragment : BaseFragment() {
         val email = et_login_email.text.toString()
         val password = et_login_password.text.toString()
 
-        if (Helpers.isEmailValid(email) && Helpers.isValidPassword(password)) {
+        if (Helpers.isEmailValid(email) && Helpers.isPasswordValid(password)) {
             return true
         } else {
 
             if (email == "" || !Helpers.isEmailValid(email)) {
                 til_frag_email_phone.error = getString(R.string.check_your_email)
             }
-            if (password == "" || !Helpers.isValidPassword(password)) {
+            if (password == "" || !Helpers.isPasswordValid(password)) {
                 til_frag_password.error = getString(R.string.check_your_password)
             }
         }

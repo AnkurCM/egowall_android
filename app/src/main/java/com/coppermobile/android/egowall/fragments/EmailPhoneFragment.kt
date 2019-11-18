@@ -21,7 +21,7 @@ import kotlinx.android.synthetic.main.fragment_email_phone.*
 class EmailPhoneFragment : BaseFragment() {
     var sharedPreferencesHelper: SharedPreferencesHelper? = null
     var emailPhoneViewModel: EmailPhoneViewModel? = null
-    var signupFragment: SignupFragment? = null
+    var signupFragment: SignupEmailFragment? = null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_email_phone, container, false)
     }
@@ -40,7 +40,7 @@ class EmailPhoneFragment : BaseFragment() {
             var entity = et_login_email.text.toString()
             if (emailPhoneViewModel!!.handleInput(entity)!!) {
                 saveEntityToSP("email", entity)
-                signupFragment = SignupFragment()
+                signupFragment = SignupEmailFragment()
                 switchFragment(signupFragment!!, true, getString(R.string.signup_fragment))
             }
         }

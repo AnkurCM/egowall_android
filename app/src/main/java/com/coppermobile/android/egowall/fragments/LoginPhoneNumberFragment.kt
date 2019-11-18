@@ -128,14 +128,14 @@ class LoginPhoneNumberFragment : Fragment(), IFlagUpdates {
         val phoneNumber = et_login_phone_number.text.toString()
         val password = et_login_password.text.toString()
 
-        if (Helpers.isPhoneValid(phoneNumber) && Helpers.isValidPassword(password)) {
+        if (Helpers.isPhoneValid(phoneNumber) && Helpers.isPasswordValid(password)) {
             return true
         } else {
 
             if (phoneNumber == "" || !Helpers.isPhoneValid(phoneNumber)) {
                 til_login_phone_number.error = getString(R.string.check_your_phone_number)
             }
-            if (password == "" || !Helpers.isValidPassword(password)) {
+            if (password == "" || !Helpers.isPasswordValid(password)) {
                 til_login_password.error = getString(R.string.check_your_password)
             }
         }

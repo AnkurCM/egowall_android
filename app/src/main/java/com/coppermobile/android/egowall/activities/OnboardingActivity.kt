@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.coppermobile.android.egowall.fragments.BaseFragment
 import kotlinx.android.synthetic.main.activity_onboarding.*
 import com.coppermobile.android.egowall.R
 import androidx.fragment.app.FragmentManager
@@ -47,18 +46,6 @@ class OnboardingActivity : BaseActivity() {
 
         tb_onboarding.setupWithViewPager(vp_onboarding)
     }
-
-
-    override fun switchFragment(targetFragment: BaseFragment, addToBackStack: Boolean, fragmentTag: String?) {
-        super.switchFragment(targetFragment, addToBackStack, fragmentTag)
-        val fragmentTransaction = supportFragmentManager.beginTransaction()
-        if (addToBackStack) {
-            fragmentTransaction.addToBackStack(null)
-        }
-        fragmentTransaction.replace(R.id.onboarding_container, targetFragment, fragmentTag)
-        fragmentTransaction.commit()
-    }
-
 
     inner class ViewPagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
 

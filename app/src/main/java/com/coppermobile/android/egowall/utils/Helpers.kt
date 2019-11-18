@@ -80,8 +80,12 @@ object Helpers {
     /**
      * Method is used to validate email is password is 6 character long or not.
      * */
-    fun isValidPassword(password: String): Boolean {
+    fun isPasswordValid(password: String): Boolean {
         return password.length in 8..15
+    }
+
+    fun isNameValid(name: String): Boolean {
+        return name != "" && name.length > 2
     }
 
 
