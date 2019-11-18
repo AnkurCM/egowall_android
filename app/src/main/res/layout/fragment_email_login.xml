@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rl_login_email_root_container"
+        android:padding="@dimen/size_30"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.EmailPhoneFragment">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_frag_email_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_20"
+                android:hint="@string/email_text"
+                android:textColorHint="@color/black"
+                app:boxStrokeColor="@color/black"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+            <EditText
+                    android:id="@+id/et_login_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:fontFamily="@font/muliregular"
+                    android:padding="@dimen/size_16"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="@dimen/size_20"
+                android:id="@+id/til_frag_password"
+                app:hintTextAppearance="@style/HintText"
+                app:errorTextAppearance="@style/LoginTextInputLayoutErrorStyle"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                app:errorEnabled="true"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiet_frag_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:fontFamily="@font/muliregular"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+                android:id="@+id/tv_login_forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot_password"
+                android:layout_gravity="end"
+                android:fontFamily="@font/muliregular"
+                android:textSize="@dimen/font_12"
+                android:textColor="@color/color_479EA1"
+                android:paddingTop="@dimen/size_6"
+                android:paddingStart="@dimen/size_10"
+                android:paddingBottom="@dimen/size_10"/>
+
+
+        <Button
+                android:layout_marginTop="@dimen/size_10"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@drawable/custom_text"
+                android:background="@drawable/custom_btn"
+                android:textAllCaps="false"
+                android:id="@+id/frag_email_phone_btn_signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:fontFamily="@font/mulibold"/>
+
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/tv_frag_email_phone_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/don_t_have_an_account_sign_up"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_16"
+            android:layout_above="@+id/tv_frag_email_terms_condition"
+            android:gravity="center"
+            android:padding="@dimen/size_10"
+            android:fontFamily="@font/muliregular"/>
+
+
+    <TextView
+            android:id="@+id/tv_frag_email_terms_condition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/by_signing_in_you_agree_to_our_terms_conditions"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_10"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:paddingTop="@dimen/size_20"
+            android:fontFamily="@font/muliregular"/>
+
+    <include
+            android:id="@+id/progress_bar"
+            layout="@layout/layout_progress"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"/>
+
+</RelativeLayout>

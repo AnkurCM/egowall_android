@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_flag_dialog_container"
+        tools:context=".fragments.FlagDialogFragment"
+        android:padding="@dimen/size_10"
+        android:orientation="vertical"
+        android:background="@drawable/rect_black_stroke_white_filled">
+
+    <EditText
+            android:id="@+id/et_flag_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/search"
+            android:drawableStart="@drawable/ic_search"
+            android:drawableTint="@color/color_479EA1"
+            android:inputType="text"
+            android:drawablePadding="@dimen/size_10"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_flag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+</LinearLayout>

@@ -9,7 +9,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcome_back">WELCOME BACK</string>
     <string name="invalid_email">Invalid Email</string>
-    <string name="password">Password</string>
+    <string name="password">Password *</string>
     <string name="invalid_password">Invalid Password</string>
     <string name="by_signing_in_you_agree_to_our_terms_conditions">
         <![CDATA[By Signing In, you agree to our terms & conditions]]></string>
@@ -49,7 +49,7 @@
     <string name="password_required">Please set atleast 8 to 15 digit alphanumeric password</string>
     <string name="password_required_text">(Please set atleast 8 digit alphanumeric password)</string>
     <string name="login_in">Login</string>
-    <string name="forgot_password">Forgot Password?</string>
+    <string name="forgot_password">Forgot Password!</string>
     <string name="not_registerd_yet_signup">Not Registered Yet? SIGN UP</string>
     <string name="by_loging_in_you_agree_to_our_terms_conditions">
         <![CDATA[By logging in, you agree to our terms & conditions]]></string>
@@ -297,16 +297,21 @@
     <string name="last_name">Last Name *</string>
     <string name="confirm_password">Confirm Password *</string>
     <string name="privacy_policy_accept"><![CDATA[I accept terms & conditions and privacy policy.]]></string>
-    <string name="welcome_to_egowall">Welcome To Egowall</string>
+    <string name="complete_sign_up">Complete Sign up</string>
+    <string name="welcome_to_egowall">Welcome to Egowall</string>
     <string name="enter_email_or_phone_number">Enter Email or Phone Number</string>
     <string name="already_a_member_login">Already have an account! Login</string>
+    <string name="phone_number_text_field">Phone Number *</string>
+    <string name="don_t_have_an_account_sign_up">Don’t have an account? Sign Up</string>
+    <string name="check_your_email">Check your email</string>
+    <string name="check_your_password">Check your password</string>
+    <string name="static_open_signup_activity">Open Signup Activity</string>
+    <string name="check_your_phone_number">Check your phone number</string>
+    <string name="flag_list">flag_list</string>
     <string name="phone_number">Phone Number</string>
     <string name="sign_up_to_egowall">Sign up to Egowall</string>
     <string name="email_text">Email *</string>
     <string name="phone_number_text">Phone Number *</string>
-    <string name="check_your_email">Check your email</string>
-    <string name="check_your_phone_number">Check your phone number</string>
-    <string name="complete_sign_up">Complete Sign up</string>
     <string name="first_name">First Name*</string>
     <string name="first_name_required">First name required</string>
     <string name="last_name_required">Last name required</string>

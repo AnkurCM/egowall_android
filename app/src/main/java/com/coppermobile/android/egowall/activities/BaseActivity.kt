@@ -6,15 +6,14 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.provider.Settings
-import android.view.WindowManager
-import androidx.core.content.ContextCompat
 import com.coppermobile.android.egowall.R
 import com.coppermobile.android.egowall.fragments.BaseFragment
 import com.coppermobile.android.egowall.interfaces.AlertDialogCallback
-import com.coppermobile.android.egowall.interfaces.ISwitchListener
 import com.coppermobile.android.egowall.interfaces.RequestPermissionsListener
 import com.coppermobile.android.egowall.utils.Helpers
 import com.coppermobile.android.egowall.utils.PermissionUtils
+import androidx.core.content.ContextCompat
+import android.view.WindowManager
 
 
 /**
@@ -46,11 +45,6 @@ open class BaseActivity : BaseConnectivityActivity() {
         fragmentTransaction.commit()
     }
 
-    fun setFullScreenActivity() {
-//        requestWindowFeature(Window.FEATURE_NO_TITLE)
-        this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
-    }
-
 
     fun changeStatusBarColor(color: Int) {
 
@@ -61,6 +55,11 @@ open class BaseActivity : BaseConnectivityActivity() {
         }
     }
 
+
+    fun setFullScreenActivity() {
+//        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+    }
 
     fun hasAudioPermission(): Boolean {
         return PermissionUtils.hasPermission(this, Manifest.permission.RECORD_AUDIO)
